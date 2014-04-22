@@ -24,7 +24,7 @@ public class Methods extends Object {
 		 * ASSIGNMENT:
 		 * Return the logical opposite of the passed parameter 'original'
 		 */
-		return false;
+		return !original;
 	}
 
 	public void flipTheSign(int[] numbers) {
@@ -33,6 +33,16 @@ public class Methods extends Object {
 		 * For all the integers in the array, reverse their sign:
 		 * e.g. {1, 54, -12} becomes {-1, -54, 12}
 		 */
+        int i = 0;
+
+        while (i < numbers.length) {
+            int temp = numbers[i] * -1;
+            numbers[i] = temp;
+            i++;
+
+        }
+
+
 	}
 
 	public boolean[] boolsRule(int floor, int[] someNumbers) {
@@ -43,6 +53,14 @@ public class Methods extends Object {
 		 * array is at least 'floor' e.g.
 		 * {0, 5, 18, 2} with a floor of 6 returns {false, false, true, false}
 		 */
+        int i = 0;
+        boolean[] newbool = [false];
+        while (i < someNumbers.length) {
+            boolean temp = i > floor;
+            newbool[i] = temp;
+            i++;
+        }
+
 		return new boolean [0];
 	}
 
