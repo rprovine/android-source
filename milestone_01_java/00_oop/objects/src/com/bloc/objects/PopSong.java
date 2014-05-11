@@ -1,5 +1,10 @@
 package com.bloc.objects;
 
+import com.sun.media.jfxmedia.track.SubtitleTrack;
+import com.sun.org.apache.xpath.internal.operations.String;
+
+import java.lang.Override;
+
 class PopSong extends Song {
 	// The number of weeks this song stayed on Billboard's top 100
 	int mWeeksOnBillboard;
@@ -10,7 +15,9 @@ class PopSong extends Song {
 	 *				 year and weeks on billboard
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+    PopSong() {
+        this("Ensemble", "Title", "Year", "Weeks")
+    }
 	/*
 	 * Partial Constructor
 	 * Side-effects: Sets the year of release to 0
@@ -18,7 +25,12 @@ class PopSong extends Song {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+    PopSong(Ensemble mEnsemble, String mTitle, int mYearReleased) {
+        @param mEnsemble = ensemble
+        @param mTitle = title
+        mYearReleased = 0
 
+    }
 	/*
 	 * Full Song Constructor
 	 * Side-effects: Sets the weeks on billboard to 0
@@ -27,7 +39,12 @@ class PopSong extends Song {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-
+    Song(Ensemble mEnsemble, String mTitle, int mWeeksonBillboard, int mYearReleased) {
+        mYearReleased = 0
+        @param mEnsemble = ensemble
+        @param mTitle = title
+        @param mYearReleased = yearReleased
+    }
 	/*
 	 * Full PopSong Constructor
 	 * @param ensemble the ensemble responsible
