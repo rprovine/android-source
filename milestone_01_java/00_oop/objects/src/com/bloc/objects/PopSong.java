@@ -54,4 +54,9 @@ class PopSong extends Song {
 	 *		  				   Billboard's top 100
 	 */
 	// CONSTRUCTOR CODE GOES HERE
+    PopSong(Ensemble mEnsemble, String mTitle, int mWeeksOnBillboard, int mYearReleased)
+        @param mEnsemble = ensemble
+        @param mTitle = title
+        @param mYearReleased = yearReleased
+        @param mWeeksOnBillboard = weeksOnBillboard
 }
