@@ -2,6 +2,11 @@ package com.bloc.classes;
 
 
 class Dog {
+    // The weight gained every time a dog is fed
+    final float WEIGHT_GAIN = 0.25f;
+    // The weight lost every time a dog plays
+    final float WEIGHT_LOSS = 0.4f;
+
     // Hair length
     float mHairLength;
     // Gender, either "male" or "female"
@@ -16,7 +21,8 @@ class Dog {
     String mColor;
 
     // ADD MEMBER VARIABLES HERE IF NECESSARY
-
+    int mFeedCount;
+    int mPlayCount;
     /*
      * getHairLength
      * @return this Dog's hair length
@@ -140,15 +146,16 @@ class Dog {
 
     /*
      * feed
-     * Side-effect: 1. The Dog gains weight
+     * Side-effect: 1. The Dog gains weight, WEIGHT_GAIN
      * 				2. Every 3 meals, the Dog grows to a larger size, if possible
      *				i.e. "tiny" -> "small" -> "average" -> "large"
      * @return nothing
      */
     // ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
     void feed() {
-        int i = 0;
-        if (i % 3 == 0) {
+        mWeight = mWeight + WEIGHT_GAIN;
+        mFeedCount++;
+        if (mFeedCount % 3 == 0) {
             if ("tiny".equals(mSize)) {
                 mSize = "small";
             } else if ("small".equals(mSize)) {
@@ -158,9 +165,6 @@ class Dog {
             } else {
                 System.out.println("You/'re dog is so fat!");
             }
-            i++;
-        } else {
-            i++;
         }
     }
 
@@ -173,8 +177,10 @@ class Dog {
      */
     // ADD YOUR METHOD HERE, NAME MUST MATCH DESCRIPTION
     void play() {
-        int i = 0;
-        if (i % 6 == 0) {
+        mWeight = mWeight - WEIGHT_LOSS;
+        mPlayCount++;
+
+        if (mPlayCount % 6 == 0) {
             if ("large".equals(mSize)) {
                 mSize = "average";
             }
@@ -186,9 +192,6 @@ class Dog {
             } else {
                 System.out.println("You/'re dog is already tiny!");
             }
-            i++;
-        } else {
-            i++;
         }
     }
 
