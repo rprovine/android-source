@@ -5,8 +5,7 @@ import java.lang.Override;
 // CLASS DEFINITION GOES HERE
 class GreatDane extends Dog {
     @Override
-    void feed();
-    {
+    void feed() {
         int i = 0;
         if (i % 3 == 0) {
             if ("tiny".equals(mSize)) {
@@ -27,8 +26,9 @@ class GreatDane extends Dog {
             i++;
         }
     }
+
     @Override
-    void play(); {
+    void play() {
         super.play();
         int i = 0;
         if (i % 6 == 0) {

@@ -1,7 +1,5 @@
 package com.bloc.inherit;
 
-import java.lang.Override;
-
 // CLASS DEFINITION GOES HERE
 class Chihuahua extends Dog {
     @Override
@@ -23,3 +21,4 @@ class Chihuahua extends Dog {
             i++;
         }
     }
+}
