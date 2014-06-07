@@ -4,11 +4,13 @@ import java.lang.Override;
 
 // CLASS DEFINITION GOES HERE
 class GoldenRetriever extends Dog {
+
+    int mGoldenRetrieverPlayCount = 0;
+
     @Override
     void play() {
-        super.play();
-        int i = 0;
-        if (i % 3 == 0) {
+        mGoldenRetrieverPlayCount++;
+        if (mGoldenRetrieverPlayCount % 3 == 0) {
         if ("large".equals(mSize)) {
         mSize = "average";
         }
@@ -20,11 +22,11 @@ class GoldenRetriever extends Dog {
         } else {
         System.out.println("You/'re dog is already tiny!");
         }
-        i++;
+
         }
         else {
-        i++;
-            }
+            mGoldenRetrieverPlayCount++;
+        }
 
     }
 }
