@@ -194,8 +194,8 @@ abstract class Dog {
 	void changeSize(boolean grow) {
 		int sizeIndex = getSizeIndex();
 		sizeIndex = sizeIndex + (grow ? 1 : -1);
-		if (sizeIndex > 3) {
-			sizeIndex = 3;
+		if (sizeIndex > 4) {
+			sizeIndex = 4;
 		} else if (sizeIndex < 0) {
 			sizeIndex = 0;
 		}
@@ -227,6 +227,7 @@ abstract class Dog {
 			case "small": return 1;
 			case "average": return 2;
 			case "large": return 3;
+            case "huge": return 4;
 			default: return 2;
 		}
 	}
@@ -241,7 +242,8 @@ abstract class Dog {
 			case 0: return "tiny";
 			case 1: return "small";
 			case 2: return "average";
-			case 3:
+			case 3: return "large";
+            case 4: return "huge";
 			default: return "large";
 		}
 	}

@@ -1,8 +1,5 @@
 package com.bloc.objects;
 
-import com.sun.media.jfxmedia.track.SubtitleTrack;
-import com.sun.org.apache.xpath.internal.operations.String;
-
 class Song extends Object {
 	// The ensemble which produced it
 	Ensemble mEnsemble;
@@ -12,13 +9,13 @@ class Song extends Object {
 	int mYearReleased;
 
 	/*
-	 * Basic Constructor
+	 * Basic (or default) Constructor
 	 * Side-effects: Assigns some default ensemble, title and
 	 *				 and year of your choosing
 	 */
 	// CONSTRUCTOR CODE GOES HERE
     Song() {
-        this("Ensemble", "Title", "Year")
+        this(new Ensemble(), "Some Song Title", 1995);
     }
 	/*
 	 * Partial Constructor
@@ -27,10 +24,8 @@ class Song extends Object {
 	 * @param title the song title
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-    Song(Ensemble mEnsemble, String mTitle, int mYearReleased) {
-        @param mEnsemble = ensemble
-        @param mTitle = title
-        mYearReleased = 0
+    Song(Ensemble ensemble, String title) {
+        this(ensemble, title, 0);
     }
 	/*
 	 * Full Constructor
@@ -39,9 +34,9 @@ class Song extends Object {
 	 * @param yearReleased the year the song was released
 	 */
 	// CONSTRUCTOR CODE GOES HERE
-     Song(Ensemble mEnsemble, String mTitle, int mYearReleased) {
-         @param mEnsemble = ensemble
-         @param mTitle = title
-         mYearReleased = yearReleased
+     Song(Ensemble ensemble, String title, int yearReleased) {
+         mEnsemble = ensemble;
+         mTitle = title;
+         mYearReleased = yearReleased;
      }
 }

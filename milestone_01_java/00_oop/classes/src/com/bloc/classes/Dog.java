@@ -23,6 +23,10 @@ class Dog {
     // ADD MEMBER VARIABLES HERE IF NECESSARY
     int mFeedCount;
     int mPlayCount;
+
+
+        // Main.java
+
     /*
      * getHairLength
      * @return this Dog's hair length
@@ -183,11 +187,9 @@ class Dog {
         if (mPlayCount % 6 == 0) {
             if ("large".equals(mSize)) {
                 mSize = "average";
-            }
-            if ("average".equals(mSize)) {
+            } else if ("average".equals(mSize)) {
                 mSize = "small";
-            }
-            if ("small".equals(mSize)) {
+            } else if ("small".equals(mSize)) {
                 mSize = "tiny";
             } else {
                 System.out.println("You/'re dog is already tiny!");

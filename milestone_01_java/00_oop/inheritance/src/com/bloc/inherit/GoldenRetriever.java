@@ -1,7 +1,5 @@
 package com.bloc.inherit;
 
-import java.lang.Override;
-
 // CLASS DEFINITION GOES HERE
 class GoldenRetriever extends Dog {
 
@@ -9,24 +7,14 @@ class GoldenRetriever extends Dog {
 
     @Override
     void play() {
-        mGoldenRetrieverPlayCount++;
-        if (mGoldenRetrieverPlayCount % 3 == 0) {
-        if ("large".equals(mSize)) {
-        mSize = "average";
+        setWeight(getWeight() - WEIGHT_LOST_FROM_FEEDING);
+        if (getWeight() < MINIMUM_WEIGHT) {
+            setWeight(MINIMUM_WEIGHT);
         }
-        if ("average".equals(mSize)) {
-        mSize = "small";
+        // Pre-increment play counter
+        if (++mPlayCounter == 3) {
+            changeSize(false);
+            mPlayCounter = 0;
         }
-        if ("small".equals(mSize)) {
-        mSize = "tiny";
-        } else {
-        System.out.println("You/'re dog is already tiny!");
-        }
-
-        }
-        else {
-            mGoldenRetrieverPlayCount++;
-        }
-
     }
 }

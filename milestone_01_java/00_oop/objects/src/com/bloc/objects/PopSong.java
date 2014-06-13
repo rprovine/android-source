@@ -1,10 +1,5 @@
 package com.bloc.objects;
 
-import com.sun.media.jfxmedia.track.SubtitleTrack;
-import com.sun.org.apache.xpath.internal.operations.String;
-
-import java.lang.Override;
-
 class PopSong extends Song {
 	// The number of weeks this song stayed on Billboard's top 100
 	int mWeeksOnBillboard;
