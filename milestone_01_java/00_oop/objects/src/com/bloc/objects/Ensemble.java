@@ -14,7 +14,7 @@ class Ensemble extends Object {
      */
     // CONSTRUCTOR CODE GOES HERE
     Ensemble(artist[] artists) {
-        this.mArtists = artists;
+        mArtists = artists;
     }
 
     /*

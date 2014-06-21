@@ -26,9 +26,9 @@ class PopSong extends Song {
      */
     // CONSTRUCTOR CODE GOES HERE
     PopSong(Ensemble ensemble, String title, int yearReleased) {
-        this.mEnsemble = ensemble;
-        this.mTitle = title;
-        this.mYearReleased = 0;
+        mEnsemble = ensemble;
+        mTitle = title;
+        mYearReleased = 0;
 
     }
 
@@ -41,10 +41,10 @@ class PopSong extends Song {
      */
     // CONSTRUCTOR CODE GOES HERE
     Song(Ensemble ensemble, String title, int weeksOnBillboard, int yearReleased) {
-        this.mYearReleased = 0;
-        this.mEnsemble = ensemble;
-        this.mTitle = title;
-        this.mYearReleased = yearReleased;
+        mYearReleased = 0;
+        mEnsemble = ensemble;
+        mTitle = title;
+        mYearReleased = yearReleased;
     }
 
     /*
@@ -57,10 +57,10 @@ class PopSong extends Song {
      */
     // CONSTRUCTOR CODE GOES HERE
     PopSong(Ensemble ensemble, String title, int weeksOnBillboard, int yearReleased) {
-        this.mEnsemble = ensemble;
-        this.mTitle = title;
-        this.mYearReleased = yearReleased;
-        this.mWeeksOnBillboard = weeksOnBillboard;
+        mEnsemble = ensemble;
+        mTitle = title;
+        mYearReleased = yearReleased;
+        mWeeksOnBillboard = weeksOnBillboard;
 
     }
 }

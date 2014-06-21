@@ -37,8 +37,8 @@ class Song extends Object {
      */
     // CONSTRUCTOR CODE GOES HERE
     Song(Ensemble ensemble, String title, int yearReleased) {
-        this.mEnsemble = ensemble;
-        this.mTitle = title;
-        this.mYearReleased = yearReleased;
+        mEnsemble = ensemble;
+        mTitle = title;
+        mYearReleased = yearReleased;
     }
 }
