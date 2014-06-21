@@ -1,5 +1,7 @@
 package com.bloc.objects;
 
+import com.sun.org.apache.xpath.internal.operations.String;
+
 class Artist extends Object {
     // The artist's first name
     String mFirstName;
@@ -12,7 +14,7 @@ class Artist extends Object {
      * @param lastName
      */
     // CONSTRUCTOR CODE GOES HERE
-    Artist() {
+    Artist(String firstName, String lastName) {
         this.mFirstName = firstName;
         this.mLastName = lastName;
 
